@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SIAKAD"
+    x:Class="SIAKAD.MenuPage">
+
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView />
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        Title="Beranda"
+        Route="beranda"
+        Icon="beranda"
+        IsTabStop="True"
+        ContentTemplate="{DataTemplate local:BerandaPage}" />
+
+    <FlyoutItem
+        Title="MyTabApp"
+        Shell.TabBarIsVisible="False"
+        FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+            Title="Mahasiswa"
+            Route="mahasiswa"
+            Icon="mahasiswa"
+            IsTabStop="True"
+            ContentTemplate="{DataTemplate local:MahasiswaPage}" />
+
+        <ShellContent
+            Title="Mata Kuliah"
+            Route="matkul"
+            Icon="matkul"
+            IsTabStop="True"
+            ContentTemplate="{DataTemplate local:MaktulPage}" />
+
+        <ShellContent
+            Title="Kartu Hasil Studi"
+            Route="khs"
+            Icon="khs"
+            IsTabStop="True"
+            ContentTemplate="{DataTemplate local:KhsPage}" />
+
+    </FlyoutItem>
+
+    <FlyoutItem
+        Title="MyTabApp"
+        Shell.TabBarIsVisible="False"
+        FlyoutDisplayOptions="AsMultipleItems">
+
+        <ShellContent
+            Title="Informasi"
+            Route="info"
+            Icon="info"
+            IsTabStop="True"
+            ContentTemplate="{DataTemplate local:InfoPage}" />
+
+        <ShellContent
+            Title="Tentang"
+            Route="tentang"
+            Icon="tentang"
+            IsTabStop="True"
+            ContentTemplate="{DataTemplate local:TentangPage}" />
+
+    </FlyoutItem>
+
+    <MenuItem Text="Keluar" IconImageSource="logout" Clicked="logout" />
+
+</Shell>

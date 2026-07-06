@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.KhsPage"
+    Title="Kartu Hasil Studi">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtNim"
+                    Placeholder="NIM Mahasiswa"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
+                    Completed="txtNimCompleted"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtNama"
+                    IsReadOnly="True"
+                    Placeholder="Nama Mahasiswa"
+                    PlaceholderColor="Gray"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Grid>
+                    <Picker
+                        x:Name="cmbMatkul"
+                        Title="Pilih Mata Kuliah"
+                        TitleColor="Gray"
+                        TextColor="Black" />
+
+                    <Image
+                        Source="drop_down"
+                        WidthRequest="18"
+                        HeightRequest="18"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Margin="0, 0, 5, 0"
+                        InputTransparent="True" />
+                </Grid>
+            </Frame>
+
+            <BoxView 
+                HeightRequest="2"
+                Margin="0, 10, 0, 0"
+                BackgroundColor="Gray" />
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtKuis"
+                    Placeholder="Nilai Kuis"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtTugas"
+                    Placeholder="Nilai Tugas"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtUts"
+                    Placeholder="Nilai UTS"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtUas"
+                    Placeholder="Nilai UAS"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
+                    TextColor="Black" />
+            </Frame>
+
+            <Button
+                x:Name="btnHitung"
+                Text="Hitung"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="Hitung" />
+
+            <BoxView 
+                HeightRequest="2"
+                Margin="0, 10, 0, 0"
+                BackgroundColor="Gray" />
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtRata"
+                    Placeholder="Nilai Rata-rata"
+                    IsReadOnly="True"
+                    PlaceholderColor="Gray"
+                    TextColor="Black" />
+            </Frame>
+
+            <Frame
+                Padding="10"
+                BorderColor="Gray"
+                CornerRadius="8"
+                HasShadow="False">
+                <Entry
+                    x:Name="txtGrade"
+                    Placeholder="Nilai Grade"
+                    IsReadOnly="True"
+                    PlaceholderColor="Gray"
+                    TextColor="Black" />
+            </Frame>
+
+            <Button
+                x:Name="btnSimpan"
+                Text="Simpan"
+                BackgroundColor="Green"
+                TextColor="White" />
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

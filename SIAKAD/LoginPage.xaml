@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.LoginPage"
+    Title="Login">
+    <Grid>
+        <BoxView Color="#1565C0" />
+
+        <ScrollView>
+            <StackLayout
+                VerticalOptions="Center"
+                Padding="30"
+                Spacing="20">
+                <Frame
+                    WidthRequest="140"
+                    HeightRequest="140"
+                    CornerRadius="70"
+                    BackgroundColor="white"
+                    Padding="20"
+                    HasShadow="True"
+                    HorizontalOptions="Center">
+                    <Image
+                        Source="logo.png"
+                        Aspect="AspectFit" />
+                </Frame>
+
+                <Label
+                    Text="SIAKAD"
+                    FontSize="32"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    HorizontalOptions="Center" />
+
+                <Label
+                    Text="Sistem Informasi Akademik"
+                    FontSize="16"
+                    TextColor="#E3F2FD"
+                    HorizontalOptions="Center" />
+
+                <Frame
+                    BackgroundColor="White"
+                    CornerRadius="20"
+                    Padding="25"
+                    HasShadow="True">
+                    <StackLayout Spacing="18">
+                        <Label
+                            Text="LOGIN"
+                            TextColor="#1565C0"
+                            FontSize="22"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"/>
+
+                        <Frame
+                            BorderColor="#E0E0E0"
+                            CornerRadius="10"
+                            Padding="10"
+                            HasShadow="False">
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                                    Source="user"
+                                    WidthRequest="22"
+                                    HeightRequest="22"
+                                    VerticalOptions="Center"/>
+
+                                <Entry
+                                    x:Name="txtUsername"
+                                    Placeholder="Username"
+                                    PlaceholderColor="Gray"
+                                    TextColor="Black"
+                                    Grid.Column="1" />
+                            </Grid>
+                        </Frame>
+
+                        <Frame
+                            BorderColor="#E0E0E0"
+                            CornerRadius="10"
+                            Padding="10"
+                            HasShadow="False">
+                            <Grid ColumnSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <Image
+                                    Source="lock"
+                                    WidthRequest="22"
+                                    HeightRequest="22"
+                                    VerticalOptions="Center"/>
+                                
+                                <Entry
+                                    x:Name="txtPassword"
+                                    Placeholder="Password"
+                                    PlaceholderColor="Gray"
+                                    IsPassword="True"
+                                    TextColor="Black"
+                                    Grid.Column="1" />
+                            </Grid>
+                        </Frame>
+
+                        <Button
+                            Text="MASUK"
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HeightRequest="50"
+                            CornerRadius="25"
+                            BackgroundColor="#1565C0"
+                            TextColor="White"
+                            Clicked="btnMasuk" />
+                    </StackLayout>
+                </Frame>
+
+                <Label
+                    Text="© 2026 SIAKAD HIMTI. All rights reserved."
+                    FontSize="12"
+                    TextColor="White"
+                    Opacity="0.6"
+                    HorizontalOptions="Center" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>

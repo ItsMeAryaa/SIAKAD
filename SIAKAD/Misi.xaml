@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.Misi">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            
+            <Label 
+                Text="MISI"
+                TextColor="Black"
+                FontSize="24"
+                FontAttributes="Bold" />
+
+            <Label
+                Text="1. Mendorong riset inovatif di bidang pendidikan dan teknologi untuk mendukung pembangunan wilayah Kupang dan sekitarnya agar lebih berkualitas."
+                TextColor="Black"/>
+
+            <Label
+                Text="2. Menghasilkan lulusan yang kompeten dan memiliki karakter teknokrat kewirausahaan."
+                TextColor="Black"/>
+
+            <Label
+                Text="3. Mengembangkan ilmu pengetahuan dan teknologi yang sesuai dengan perkembangan dan kebutuhan masyarakat."
+                TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

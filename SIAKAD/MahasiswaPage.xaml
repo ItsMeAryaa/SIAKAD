@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.MahasiswaPage"
+    Title="Mahasiswa">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="tambah_data" Clicked="tambahData" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView
+                x:Name="ListMahasiswa"
+                HasUnevenRows="True"
+                SeparatorVisibility="None"
+                ItemSelected="listMahasiswa">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                Margin="10.5"
+                                Padding="10"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                BackgroundColor="White"
+                                >
+                                <StackLayout
+                                    Orientation="Horizontal"
+                                    Spacing="10">
+                                    <Image 
+                                        Source="{Binding Foto}" 
+                                        HeightRequest="100"
+                                        WidthRequest="100"
+                                        Aspect="AspectFill" />
+
+                                    <StackLayout VerticalOptions="CenterAndExpand">
+                                        <Label
+                                            Text="{Binding Nama}"
+                                            FontSize="Medium"
+                                            FontAttributes="Bold"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Text="{Binding Nim}"
+                                            FontSize="Small"
+                                            TextColor="Gray" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.TambahMahasiswaPage"
+    Title="Tambah Data Mahasiswa">
+
+    <StackLayout Padding="20">
+        <Frame 
+            Padding="10"
+            BorderColor="Gray"
+            CornerRadius="8"
+            HasShadow="False">
+
+            <Entry
+                x:Name="txtNim"
+                Placeholder="NIM Mahasiswa"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+
+        </Frame>
+
+        <Frame 
+            Padding="10"
+            BorderColor="Gray"
+            CornerRadius="8"
+            HasShadow="False">
+
+            <Entry
+                x:Name="txtNama"
+                Placeholder="Nama Mahasiswa"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+
+        </Frame>
+
+        <Frame 
+            Padding="10"
+            BorderColor="Gray"
+            CornerRadius="8"
+            HasShadow="False">
+
+            <Entry
+                x:Name="txtProdi"
+                Placeholder="Prodi"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+
+        </Frame>
+
+        <Frame 
+            Padding="10"
+            BorderColor="Gray"
+            CornerRadius="8"
+            HasShadow="False">
+
+            <Entry
+                x:Name="txtTelp"
+                Placeholder="No. Telpon"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+
+        </Frame>
+
+        <Frame 
+            Padding="10"
+            BorderColor="Gray"
+            CornerRadius="8"
+            HasShadow="False">
+
+            <Entry
+                x:Name="txtAlamat"
+                Placeholder="Alamat"
+                PlaceholderColor="Gray"
+                TextColor="Black" />
+
+        </Frame>
+
+        <Image
+            x:Name="imgMahasiswa"
+            HeightRequest="150"
+            Aspect="AspectFill"
+            BackgroundColor="LightGray" />
+
+        <ImageButton
+            Source="addImage"
+            HeightRequest="50"
+            WidthRequest="50"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            Clicked="btnPilihFoto" />
+
+        <Button
+            x:Name="BtnSimpan"
+            Text="Simpan"
+            BackgroundColor="Cyan"
+            TextColor="White"
+            Clicked="btnSimpan" />
+    </StackLayout>
+
+</ContentPage>
