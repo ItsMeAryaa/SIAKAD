@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="SIAKAD.DataKhsPage"
+    Title="Data KHS">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView
+                x:Name="ListKhs"
+                HasUnevenRows="True"
+                SeparatorVisibility="None"
+                ItemSelected="listKhs">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame
+                                Margin="10.5"
+                                Padding="10"
+                                CornerRadius="10"
+                                HasShadow="True"
+                                BackgroundColor="White">
+                                <StackLayout
+                                    Orientation="Horizontal"
+                                    Spacing="10">
+                                    <StackLayout VerticalOptions="CenterAndExpand">
+                                        <Label
+                                            Text="{Binding Nama}"
+                                            FontSize="Medium"
+                                            FontAttributes="Bold"
+                                            TextColor="Black" />
+
+                                        <Label
+                                            Text="{Binding Nim}"
+                                            FontSize="Small"
+                                            TextColor="Gray" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>                            
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

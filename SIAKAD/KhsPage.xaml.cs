@@ -77,5 +77,79 @@ namespace SIAKAD
                 txtNim.Focus();
             }
         }
+
+        private async void Simpan(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNim.Text) ||
+                string.IsNullOrWhiteSpace(txtNama.Text) ||
+                cmbMatkul.SelectedItem == null ||
+                string.IsNullOrWhiteSpace(txtKuis.Text) ||
+                string.IsNullOrWhiteSpace(txtTugas.Text) ||
+                string.IsNullOrWhiteSpace(txtUts.Text) ||
+                string.IsNullOrWhiteSpace(txtUas.Text))
+            {
+                await DisplayAlert(
+                    "Peringatan",
+                    "Semua data harus diisi!!!",
+                    "OK");
+                return;
+            }
+
+            Matkul matkul = (Matkul)cmbMatkul.SelectedItem;
+            bool sudahAda = await DatabaseHelper.CekKhs(txtNim.Text, matkul.Nama);
+
+            if (sudahAda)
+            {
+                await DisplayAlert(
+                    "Peringatan",
+                    "Mahasiswa sudah mengambil mata kuliah tersebut!!",
+                    "OK");
+                return;
+            }
+
+            Khs khs = new Khs
+            {
+                Nim = txtNim.Text,
+                Nama = txtNama.Text,
+                NamaMatkul = matkul.Nama,
+
+                Kuis = txtKuis.Text,
+                Tugas = txtTugas.Text,
+                Uts = txtUts.Text,
+                Uas = txtUas.Text,
+
+                Rata = txtRata.Text,
+                Grade = txtGrade.Text
+            };
+
+            await DatabaseHelper.addKhs(khs);
+
+            await DisplayAlert(
+                "Sukses",
+                "Data KHS berhasil disimpan!",
+                "OK");
+
+            BersihForm();
+        }
+
+        private void BersihForm()
+        {
+            cmbMatkul.SelectedItem = null;
+
+            txtKuis.Text = "";
+            txtTugas.Text = "";
+            txtUts.Text = "";
+            txtUas.Text = "";
+
+            txtRata.Text = "";
+            txtGrade.Text = "";
+
+            txtNim.Focus();
+        }
+
+        private async void DataKhs(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataKhsPage());
+        }
     }
 }

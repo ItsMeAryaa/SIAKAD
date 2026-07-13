@@ -5,6 +5,10 @@
     x:Class="SIAKAD.KhsPage"
     Title="Kartu Hasil Studi">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="report" Clicked="DataKhs" />
+    </ContentPage.ToolbarItems>
+
     <ScrollView>
         <StackLayout Padding="20">
             <Frame
@@ -156,6 +160,7 @@
                 x:Name="btnSimpan"
                 Text="Simpan"
                 BackgroundColor="Green"
+                Clicked="Simpan"
                 TextColor="White" />
         </StackLayout>
     </ScrollView>

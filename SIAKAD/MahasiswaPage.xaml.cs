@@ -32,7 +32,7 @@ namespace SIAKAD
 
         private async void listMahasiswa(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null) 
+            if (e.SelectedItem == null)
                 return;
 
             var mahasiswa = (Mahasiswa)e.SelectedItem;
@@ -44,19 +44,26 @@ namespace SIAKAD
                 "Ubah",
                 "Hapus");
 
-            if (action == "Detail") {
+            if (action == "Detail")
+            {
                 await Navigation.PushAsync(new DetailMahasiswaPage(mahasiswa));
-            } else if (action == "Ubah") {
+            }
+            else if (action == "Ubah")
+            {
                 await Navigation.PushAsync(new TambahMahasiswaPage(mahasiswa));
-            } else if (action == "Hapus") {
+            }
+            else if (action == "Hapus")
+            {
                 bool jawab = await DisplayAlert(
                     "Notifikasi Hapus",
                     $"Apakah anda yakin ingin menghapus data mahasiswa\n{mahasiswa.Nama}",
                     "Ya",
                     "Tidak");
 
-                if (jawab){
-                    if (!string.IsNullOrEmpty(mahasiswa.Foto) && System.IO.File.Exists(mahasiswa.Foto)) { 
+                if (jawab)
+                {
+                    if (!string.IsNullOrEmpty(mahasiswa.Foto) && System.IO.File.Exists(mahasiswa.Foto))
+                    {
                         System.IO.File.Delete(mahasiswa.Foto);
                     }
 
@@ -69,8 +76,6 @@ namespace SIAKAD
                         "Ok");
                 }
             }
-
-            ListMahasiswa.SelectedItem = null;
         }
     }
 }
